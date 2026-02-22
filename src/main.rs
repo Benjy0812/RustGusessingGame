@@ -1,13 +1,16 @@
+use colored::*;
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io::{self, Write};
-use colored::*;
 
 fn main() {
     println!("{}", "Guess the number!".bright_blue().bold());
 
     loop {
-        print!("{}", "Enter difficulty level (1: 1-10, 2: 1-25, 3: 1-50, 4: 1-100): ".yellow());
+        print!(
+            "{}",
+            "Enter difficulty level (1: 1-10, 2: 1-25, 3: 1-50, 4: 1-100): ".yellow()
+        );
         io::stdout().flush().expect("Failed to flush stdout");
 
         let mut difficulty = String::new();
